@@ -75,6 +75,7 @@ class realmd (
     class { '::realmd::install': }
     -> class { '::realmd::config': }
     ~> class { '::realmd::join': }
+    -> class { '::realmd::sssd::config': }
   }
 
 }
